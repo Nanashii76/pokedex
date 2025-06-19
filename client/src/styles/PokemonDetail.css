@@ -1,0 +1,134 @@
+.pokemon-detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.pokemon-detail-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-name {
+  text-transform: capitalize;
+  font-size: 2.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detail-id {
+  font-size: 0.7em;
+  color: #777;
+}
+
+.detail-image-wrapper {
+  margin: 20px 0;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.detail-types {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+
+.detail-stats,
+.detail-abilities,
+.detail-dimensions {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+
+.detail-stats h3,
+.detail-abilities h3,
+.detail-dimensions h3 {
+  font-size: 1.6em;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.detail-stats ul,
+.detail-abilities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-stats li,
+.detail-abilities li {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.detail-abilities li {
+    justify-content: center;
+}
+
+.detail-stats li span:first-child {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.detail-dimensions p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.detail-loading, .detail-error, .detail-no-data {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5em;
+    color: #888;
+}
+
+.detail-error {
+    color: #dc3545;
+}
