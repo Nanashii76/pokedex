@@ -3,7 +3,7 @@ import {useParams, Link} from "react-router-dom";
 import axios from "axios";
 import "../styles/PokemonDetail.css";
 
-const API_BASE_URL = "http://localhost:3001/api";
+const API_BASE_URL = process.env.API_BASE_URL;
 
 function PokemonDetail() {
     const {id} = useParams();

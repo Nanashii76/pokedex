@@ -3,7 +3,7 @@ import axios from "axios";
 import PokemonCard from "./PokemonCard";
 import "../styles/Pokedex.css";
 
-const API_BASE_URL = "http://localhost:3001/api";
+const API_BASE_URL = process.env.API_BASE_URL;
 
 function Pokedex() {
     const [pokemonList, setPokemonList] = useState([]);
