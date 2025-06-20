@@ -1,0 +1,104 @@
+.pokedex-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #c7f0d8;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+  border: 2px solid #526f00;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 0.8em;
+  width: 50%;
+  max-width: 300px;
+  background-color: #e0f8cf;
+  color: #333;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #000;
+}
+
+.search-button, .clear-button {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #c7f0d8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5);
+}
+
+.search-button:hover, .clear-button:hover {
+  background-color: #555;
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
+}
+
+.clear-button {
+    background-color: #777;
+}
+
+.clear-button:hover {
+    background-color: #999;
+}
+
+.loading-message, .error-message {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 15px;
+  color: #333;
+}
+
+.error-message {
+  color: #b30000;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.load-more-button {
+  display: block;
+  margin: 25px auto;
+  padding: 10px 20px;
+  background-color: #004d00;
+  color: #c7f0d8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5);
+}
+
+.load-more-button:hover:not(:disabled) {
+  background-color: #006600;
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
+}
+
+.load-more-button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
