@@ -3,7 +3,9 @@ import axios from "axios";
 import PokemonCard from "./PokemonCard";
 import "../styles/Pokedex.css";
 
-const API_BASE_URL = process.env.API_BASE_URL;
+const REACT_APP_API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
+console.log("API_BASE_URL:", REACT_APP_API_BASE_URL);
 
 function Pokedex() {
     const [pokemonList, setPokemonList] = useState([]);
@@ -18,7 +20,9 @@ function Pokedex() {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get(`${API_BASE_URL}/pokemons?offset=${currentOffset}&limit=${limit}`);
+            const response = await axios.get(`${REACT_APP_API_BASE_URL}/pokemons?offset=${currentOffset}&limit=${limit}`);
+            console.log("Pokémon data loaded:", response.data);
+            console.log(REACT_APP_API_BASE_URL);
             setPokemonList(prevList => [...prevList, ...response.data.results]);
             setTotalCount(response.data.count);
 
@@ -41,7 +45,7 @@ function Pokedex() {
         setError(null);
         setPokemonList([]);
         try {
-            const response = await axios.get(`${API_BASE_URL}/pokemon/${searchTerm.toLowerCase()}`);
+            const response = await axios.get(`${REACT_APP_API_BASE_URL}/pokemon/${searchTerm.toLowerCase()}`);
             setPokemonList([response.data]);
         } catch (err) {
             if (err.response && err.response.status === 404) {

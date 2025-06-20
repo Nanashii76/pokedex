@@ -3,7 +3,7 @@ import {useParams, Link} from "react-router-dom";
 import axios from "axios";
 import "../styles/PokemonDetail.css";
 
-const API_BASE_URL = process.env.API_BASE_URL;
+const REACT_APP_API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 function PokemonDetail() {
     const {id} = useParams();
@@ -16,7 +16,7 @@ function PokemonDetail() {
             setLoading(true);
             setError(null);
             try {
-                const response = await axios.get(`${API_BASE_URL}/pokemon/${id}`);
+                const response = await axios.get(`${REACT_APP_API_BASE_URL}/pokemon/${id}`);
                 setPokemon(response.data);
             } catch (err) {
                 if (err.response && err.response.status === 404) {
